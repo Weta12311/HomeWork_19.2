@@ -53,7 +53,6 @@ class Product(models.Model):
     changes_date = models.DateField(
         blank=True, null=True, verbose_name="Дата изменения записи"
     )
-
     class Meta:
         verbose_name = "Продукты"
         verbose_name_plural = "Продукты"
