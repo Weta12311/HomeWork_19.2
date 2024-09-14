@@ -7,16 +7,18 @@
             {% for product in products %}
             <div class="col">
               <div class="card shadow-sm">
+                  <p class="card-text">{{product.name}}</p>
                 <img src="{{ product.image | media_filter}}">
                 <div class="card-body">
-                  <p class="card-text">{{product.name}}</p>
+                  <p class="card-text">{{product.category}}</p>
                   <p class="card-text">{{product.price}} руб.</p>
-                  <p class="card-text">{{product.description}}</p>
+                  <p class="card-text">{{product.description | truncate_chars}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a class="btn btn-outline-primary" role="button">Посмотреть</a>
+                      <a class="btn btn-outline-primary" href="{%url 'catalog:product_detail' product.pk %}" role="button">Посмотреть</a>
                       <button type="button" class="btn btn-outline-success">Купить</button>
                     </div>
+                      <small class="text-body-secondary">{{product.changes_date}}</small>
                   </div>
                 </div>
               </div>
