@@ -1,11 +1,12 @@
 from django.db import models
+from  blog.utils import upload_to
 
 
 class Blog(models.Model):
     title = models.CharField(max_length=150, verbose_name="название")
     body = models.TextField(verbose_name="содержимое")
     image = models.ImageField(
-        upload_to="Blog/image",
+        upload_to=upload_to,
         blank=True,
         null=True,
         verbose_name="Изображение",
