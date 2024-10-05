@@ -107,10 +107,10 @@ class Version(models.Model):
         verbose_name="Продукт",
         blank=True,
         null=True,
-        related_name="product",)
+        related_name="version",)
     version_number = models.IntegerField(verbose_name='номер версии')
     name = models.CharField(max_length=150, verbose_name='название версии')
-    version_sign = models.BooleanField(default=True, verbose_name='признак версии')
+    version_sign = models.BooleanField(default=False, verbose_name='признак версии')
 
     class Meta:
         verbose_name = "Версия"
