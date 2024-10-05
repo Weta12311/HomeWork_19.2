@@ -1,6 +1,6 @@
 from django.forms import ModelForm, ValidationError
 
-from catalog.models import Product
+from catalog.models import Product, Version
 
 
 class ProductForm(ModelForm):
@@ -31,3 +31,12 @@ class ProductForm(ModelForm):
                 raise ValidationError('Торвар с таким описанием запрещен к продадаже на этой площадке')
 
         return cleaned_data
+
+
+class VersionForm(ModelForm):
+
+    class Meta:
+        model = Version
+        fields = "__all__"
+
+
