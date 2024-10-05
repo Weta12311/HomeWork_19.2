@@ -12,7 +12,11 @@
                   <p class="card-text">{{object.category}}</p>
                   <p class="card-text">{{object.price}} руб.</p>
                   <p class="card-text">{{object.description | truncate_chars}}</p>
-                  <p class="card-text">{%for version in object.versions.all%}{{ versions }}{%endfor%}</p>
+                  {%for versions in object.version.all%}
+                  {% if versions.version_sign %}
+                  <p class="card-text">Версия: {{versions.version_number}} Название: {{versions.name}}</p>
+                  {% endif %}
+                  {% endfor %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a class="p-2 btn btn-outline-primary" href="/">Назад</a>
