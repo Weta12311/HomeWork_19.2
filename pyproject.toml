@@ -8,7 +8,6 @@ packages = [{include = "homework_19"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-django = "^5.1"
 psycopg2 = "^2.9.9"
 psycopg2-binary = "^2.9.9"
 black = "^24.8.0"
@@ -16,6 +15,7 @@ pillow = "^10.4.0"
 ipython = "^8.27.0"
 pytils = "^0.4.1"
 flake8 = "^7.1.1"
+django = "4.2.2"
 
 
 [build-system]
