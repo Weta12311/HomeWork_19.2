@@ -56,10 +56,17 @@ class Product(models.Model):
     )
     user = models.ForeignKey(User, verbose_name='Пользователь', blank=True, null=True, on_delete=models.SET_NULL)
 
+    status = models.BooleanField(default=False, blank=True, null=True)
+
     class Meta:
         verbose_name = "Продукты"
         verbose_name_plural = "Продукты"
         ordering = ["name", "category", "create_date", "changes_date"]
+        permissions = [
+            ('can_change_product_status', 'can change product status'),
+            ('can_change_description', 'can change description'),
+            ('can_change_category', 'can change category')
+        ]
 
     def __str__(self):
         return self.name

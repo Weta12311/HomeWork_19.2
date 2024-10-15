@@ -1,0 +1,52 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Бытовая химия",
+      "description": "Используется для уходом за бытовыми предметами"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Бытовая химия",
+      "description": "Все, что подходит под описание продуктов"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Еда",
+      "description": "Все, что подходит под описание продуктов"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Белизна",
+      "description": "Отмывает пятна с ткани",
+      "image": "",
+      "category": 1,
+      "price": 300,
+      "create_date": null,
+      "changes_date": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Хлеб",
+      "description": "Свежий белый хлеб",
+      "image": "",
+      "category": 3,
+      "price": 500,
+      "create_date": null,
+      "changes_date": null
+    }
+  }
+]
